@@ -14,10 +14,10 @@ set('git_tty', true);
 
 // Shared files/dirs between deploys 
 add('shared_files', [".env"]);
-add('shared_dirs', ["bootstrap", "storage"]);
+add('shared_dirs', []);
 
 // Writable dirs by web server 
-add('writable_dirs', ["bootstrap", "storage"]);
+add('writable_dirs', ["bootstrap", "storage","database"]);
 
 
 // Hosts
@@ -37,5 +37,5 @@ after('deploy:failed', 'deploy:unlock');
 
 // Migrate database before symlink new release.
 
-before('deploy:symlink', 'artisan:migrate');
+//before('deploy:symlink', 'artisan:migrate');
 
