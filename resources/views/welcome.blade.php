@@ -29,7 +29,7 @@
         <a href="/">Home</a>
 
         {{-- create todo --}}
-        <x-card title="To-Do Application Tonet Prueba 3">
+        <x-card title="To-Do Application by German">
             <form
                 action="{{ $model->exists ? route('todo.update', $model->id) : route('todo.store') }}"
                 method="POST"
